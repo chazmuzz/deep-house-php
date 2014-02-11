@@ -1,4 +1,4 @@
-<?php namespace ncmvc\response;
+<?php namespace deep\response;
 
 function get() {
 	static $response;

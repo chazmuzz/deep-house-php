@@ -4,7 +4,7 @@
  *	
  */
 function query() {
-	\ncmvc\db\select('* from bm_job_time');
+	\deep\db\select('* from bm_job_time');
 }
 
 /**

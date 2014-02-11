@@ -1,9 +1,9 @@
-<?php namespace ncmvc\config;
+<?php namespace deep\config;
 
 /**
  *	Use this to define a configuration for a environment identified by $name.
  *	For example; defining options for a dev environment
- *	ncmvc/config/environment('dev', function($config) { 
+ *	deep/config/environment('dev', function($config) { 
  *		$config->option = "foo";
  *		return $config;
  *	});

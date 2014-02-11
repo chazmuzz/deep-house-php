@@ -1,4 +1,4 @@
-<?php namespace ncmvc\request;
+<?php namespace deep\request;
 
 function get() {
 	static $request;

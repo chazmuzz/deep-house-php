@@ -1,15 +1,15 @@
-<?php namespace ncmvc\routing;
+<?php namespace deep\routing;
 
 function page($page, $handler) {
-	$request = \ncmvc\request\get();
-	$response = \ncmvc\response\get();
+	$request = \deep\request\get();
+	$response = \deep\response\get();
 	if ($page == $request->page) {
 		$response = $handler($request, $response);
 	}
 }
 
 function action($action, $handler) {
-	$request = \ncmvc\request\get();
+	$request = \deep\request\get();
 	if ($action == $request->action) {
 		$handler();
 	}
@@ -20,5 +20,5 @@ function include_page($page, $action, $arguments) {
 	$request->page = $page;
 	$request->action = $action;
 	$request->arguments = $arguments;
-	return \ncmvc\handle_request($request);
+	return \deep\handle_request($request);
 }
