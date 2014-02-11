@@ -8,6 +8,8 @@ A little MVC style framework that lets you simply write request->response PHP ap
 Here is an example of a basic CRUD controller:
 
 ```
+<?php
+
 deep\routes\handle_page('person', function($request) {
 
   deep\routes\handle_action('default', function($request) {
