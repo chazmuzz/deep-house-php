@@ -1,6 +1,6 @@
-<?php namespace deep\routing;
+<?php namespace deep\routes;
 
-function page($page, $handler) {
+function handle_page($page, $handler) {
 	$request = \deep\request\get();
 	$response = \deep\response\get();
 	if ($page == $request->page) {
@@ -8,10 +8,11 @@ function page($page, $handler) {
 	}
 }
 
-function action($action, $handler) {
+function handle_action($action, $handler) {
 	$request = \deep\request\get();
+	$response = \deep\response\get();
 	if ($action == $request->action) {
-		$handler();
+		$handler($request, $response);
 	}
 }
 
